@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="discoEdicao::#pages#disco#discoEdicao.xhtml"
+    NAME="output" PATH="/pages/disco/discoEdicao.xhtml"
+    TARGET="rules:#pages#disco#discoEdicao.xhtml" TITLE="discoEdicao" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="discoPesquisa::#pages#disco#discoPesquisa.xhtml" NAME="output1"
+    PATH="/pages/disco/discoPesquisa.xhtml"
+    TARGET="rules:#pages#disco#discoPesquisa.xhtml"
+    TITLE="discoPesquisa" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#disco#discoEdicao.xhtml"
+  PATH="/pages/disco/discoEdicao.xhtml" SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#disco#discoPesquisa.xhtml"
+  PATH="/pages/disco/discoPesquisa.xhtml" SHAPE="256,177,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

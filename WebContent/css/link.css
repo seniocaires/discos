@@ -1,0 +1,19 @@
+.cursorMao {
+	cursor: pointer;
+}
+
+a.linkBranco:link {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.linkBranco:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.linkBranco:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+	font-weight: bold;
+}

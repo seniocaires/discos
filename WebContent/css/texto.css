@@ -1,0 +1,109 @@
+.textoCabecalho {
+	color: #4a75b5;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.textoRodape {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.edit {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 09px;
+	color: #336699;
+	border: 1px outset;
+}
+
+.botaoGrande {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 09px;
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #75a4d1;
+	width: 120px;
+	border: 1px outset;	
+}
+
+.texto10 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #336699;
+	text-align: left;
+}
+
+.campoObrigatorio {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: red;
+	font-weight: bold;
+	text-align: left;
+}
+
+.tituloPopup {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.message{
+	color: red;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 09px;
+	font-weight: bold;	
+	text-align: center;
+}
+
+.messageInfo{
+	color: green;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 09px;
+	font-weight: bold;	
+	text-align: center;
+}
+
+.messageError{
+	color: red;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 09px;
+	font-weight: bold;	
+	text-align: center;
+}
+
+.messageWarning{
+	color:#fabb00;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:09px;
+	font-weight:bold;	
+	text-align:center;
+}
+
+a.linkHeader:link {
+	font-family:  		Verdana, Arial, Helvetica, sans-serif;
+	font-size: 			11px;
+	color: 				#FFFFFF;
+	font-weight:		bold;
+	text-decoration: 	none;
+	cursor: 			pointer;
+}
+
+a.linkHeader:visited {
+	font-family:	 	Verdana, Arial, Helvetica, sans-serif;
+	font-size: 			11px;
+	color: 				#FFFFFF;
+	font-weight:		bold;
+	text-decoration: 	none;
+	cursor: 			pointer;
+}
+
+a.linkHeader:hover {
+	font-family:  		Verdana, Arial, Helvetica, sans-serif;
+	font-size: 			11px;
+	color: 				#FFFFFF;
+	font-weight:		bold;
+	text-decoration: 	underline;
+	cursor: 			pointer;
+}

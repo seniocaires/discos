@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<ui:composition template="/templates/basico.xhtml">	
+	
+		<ui:define name="cabecalhoForm">${lbl.disco}</ui:define>
+		
+		<ui:define name="pageFormContent">
+		
+			<h:panelGrid id="gridGeral" columns="1" width="100%">
+		     	  
+				<rich:tabPanel switchType="client">
+				
+					<rich:tab id="tabPrincipal" label="#{lbl.label_aba_principal}">
+						
+						<h:panelGrid columns="5" columnClasses="colWith65,colWithCenter,colWithCenter,colWithCenter,colWithCenter" width="100%"> 
+	
+							<h:outputText value=""/>
+								
+							<a4j:commandLink action="#{discoMB.novo}" immediate="true">
+								<h:graphicImage value="/imagens/botao/novo.gif" title="#{lbl.label_novo}" styleClass="semBorda"/>
+							</a4j:commandLink>
+				
+							<a4j:commandLink action="#{discoMB.salvar}" reRender="gridGeral" >
+								<h:graphicImage value="/imagens/botao/salvar.gif" title="#{lbl.label_salvar}" styleClass="semBorda"/>
+							</a4j:commandLink>
+				
+							<a4j:commandLink action="#{discoMB.excluir}" reRender="gridGeral" onclick="if(!confirm('#{lbl.mensagem_excluir}')) {form.reset(); return false;}">
+								<h:graphicImage value="/imagens/botao/excluir.gif" title="#{lbl.label_excluir}" styleClass="semBorda"/>
+							</a4j:commandLink>
+			
+							<a4j:commandLink action="#{discoMB.exibirPaginaInicial}" immediate="true">
+								<h:graphicImage value="/imagens/botao/retornar.gif" title="#{lbl.label_retornar}" styleClass="semBorda"/>
+							</a4j:commandLink>
+		     
+							<h:outputText 	value="" />
+							<h:outputText	value="#{lbl.label_novo}"		styleClass="texto10"/>															
+							<h:outputText	value="#{lbl.label_salvar}"		styleClass="texto10"/>
+							<h:outputText	value="#{lbl.label_excluir}"	styleClass="texto10"/>
+							<h:outputText	value="#{lbl.label_retornar}"	styleClass="texto10"/>
+	
+						</h:panelGrid>
+						
+						<rich:panel>
+						
+							<h:panelGrid columns="1" columnClasses="colWith100" width="100%">
+							
+								<h:outputText value="#{lbl.disco_codigo}:"/>
+								
+								<h:inputText value="#{discoMB.disco.codigo}" size="10" styleClass="edit" disabled="true"/>
+								
+							</h:panelGrid>
+						
+							<h:panelGrid columns="2" columnClasses="colWith5,colWith95" width="100%">
+							
+								<h:outputText value="#{lbl.disco_titulo}:"/>
+								<h:outputText value="#{lbl.disco_genero}:"/>
+								
+								<h:inputText value="#{discoMB.disco.titulo}" size="100" styleClass="edit" maxlength="100"/>
+								<h:inputText value="#{discoMB.disco.genero}" size="50" styleClass="edit" maxlength="50"/>
+								
+							</h:panelGrid>
+							
+							<h:panelGrid columns="1" columnClasses="colWith100" width="100%">
+							
+								<h:outputText value="#{lbl.disco_artista}:"/>
+								
+								<h:inputText value="#{discoMB.disco.artista}" size="100" styleClass="edit" maxlength="100"/>
+								
+							</h:panelGrid>
+							
+							<h:panelGrid columns="2" columnClasses="colWith5,colWith95" width="100%">
+							
+								<h:outputText value="#{lbl.disco_quantidade}:"/>
+								<h:outputText value="#{lbl.disco_preco}:"/>
+								
+								<h:inputText value="#{discoMB.disco.quantidade}" size="20" styleClass="edit" maxlength="20"/>
+								<h:inputText value="#{discoMB.disco.preco}" size="20" styleClass="edit" maxlength="20"/>
+								
+							</h:panelGrid>
+						
+						</rich:panel>
+
+					</rich:tab>
+					
+				</rich:tabPanel>
+				
+			</h:panelGrid>
+	       	
+		</ui:define>
+		
+	</ui:composition>
+</html>

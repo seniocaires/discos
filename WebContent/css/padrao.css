@@ -1,0 +1,105 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.cabecalho {
+	background-repeat: repeat-x;
+}
+
+.rodape {
+	background-color: #4a75b5;
+}
+
+.cabecalhoForm {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bolder;
+	color: #4a75b5;
+	background-color: #f0f5f8;
+}
+
+.semBorda {
+	border: 0;
+}
+
+.colWithLeft {
+	text-align: left;
+}
+
+.colWithCenter {
+	text-align: center;
+}
+
+.colWithRight {
+	text-align: right;
+}
+
+.colWith5 {
+   width:5%;
+   text-align:left;
+}
+
+.colWith10 {
+   width:10%;
+   text-align:left;
+}
+
+.colWith20 {
+   width:20%;
+   text-align:left;
+}
+
+.colWith35 {
+   width:35%;
+   text-align:left;
+}
+
+.colWith45 {
+   width:45%;
+   text-align:left;
+}
+
+.colWith65 {
+   width:65%;
+   text-align:left;
+}
+
+.colWith75 {
+   width:75%;
+   text-align:left;
+}
+
+.colWith90 {
+   width:90%;
+   text-align:left;
+}
+
+.colWith95 {
+   width:95%;
+   text-align:left;
+}
+
+.messageInfo{
+	color:green;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:09px;
+	font-weight:bold;	
+	text-align:center;
+}
+
+.messageError{
+	color:red;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:09px;
+	font-weight:bold;	
+	text-align:center;
+}
+
+.messageWarning{
+	color:#fabb00;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:09px;
+	font-weight:bold;	
+	text-align:center;
+}

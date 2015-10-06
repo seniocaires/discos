@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+	
+    <style type="text/css">
+       .rich-messages-marker img {padding-right:7px;}
+       .rich-message-label {color:red;}
+       .top {vertical-align:top;}
+    </style>  	
+
+	<rich:messages layout="table" 
+		styleClass="message" 
+		infoClass="messageInfo" 
+		errorClass="messageError" 
+		warnClass="messageWarning">
+        
+		<f:facet name="infoMarker"/>
+
+		<f:facet name="errorMarker"/>
+		
+		<f:facet name="warnMarker"/>
+		
+	</rich:messages>
+
+</ui:composition>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xi="http://www.w3.org/2001/XInclude"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+ <converter>
+  <converter-for-class>java.math.BigDecimal</converter-for-class>
+  <converter-class>br.com.seniocaires.sporon.conversor.BigDecimalConversor</converter-class>
+ </converter>
+ <managed-bean>
+  <managed-bean-name>discoMB</managed-bean-name>
+  <managed-bean-class>br.com.seniocaires.discos.managedbean.DiscoMB</managed-bean-class>
+  <managed-bean-scope>session</managed-bean-scope>
+ </managed-bean>
+ <navigation-rule>
+  <navigation-case>
+   <from-outcome>discoEdicao</from-outcome>
+   <to-view-id>/pages/disco/discoEdicao.xhtml</to-view-id>
+   <redirect/>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>discoPesquisa</from-outcome>
+   <to-view-id>/pages/disco/discoPesquisa.xhtml</to-view-id>
+   <redirect/>
+  </navigation-case>
+ </navigation-rule>
+ <application>
+  <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+  <resource-bundle>
+   <base-name>br.com.seniocaires.discos.recurso.label</base-name>
+   <var>lbl</var>
+  </resource-bundle>
+ </application>
+</faces-config>

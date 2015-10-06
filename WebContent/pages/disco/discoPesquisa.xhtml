@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<ui:composition template="/templates/basico.xhtml">	
+	
+		<ui:define name="cabecalhoForm">${lbl.disco}</ui:define>
+		
+		<ui:define name="pageFormContent">
+		
+			<h:panelGrid columns="4" columnClasses="colWith5,colWith5,colWith90,colWithCenter" width="100%">
+			
+				<h:outputText />
+				<h:outputText />
+				<h:outputText />
+				
+				<a4j:commandLink action="#{discoMB.novo}" styleClass="texto10" immediate="true">
+					<h:graphicImage value="/imagens/botao/novo.gif" title="#{lbl.label_novo}" styleClass="semBorda"/>
+				</a4j:commandLink>
+				
+				<h:selectOneMenu value="#{discoMB.campoPesquisa}" styleClass="edit">
+					<f:selectItems value="#{discoMB.campoPesquisaList}"/>
+				</h:selectOneMenu>
+			
+				<h:inputText value="#{discoMB.descricaoPesquisa}" size="100" styleClass="edit"/>
+				
+				<a4j:commandButton action="#{discoMB.pesquisar}" value="#{lbl.label_pesquisar}" reRender="tableDisco,dsTableDisco" styleClass="botaoGrande"/>
+				
+				<h:outputText value="#{lbl.label_novo}" styleClass="texto10"/>
+				
+			</h:panelGrid>	
+	
+			<rich:dataTable id="tableDisco" value="#{discoMB.registrosDataList}" columnClasses="colWithCenter,colWith10,colWith10,colWith25,colWith20,colWith25,colWith10" var="disco" width="100%" onRowMouseOver="this.style.backgroundColor='#F1F1F1'" onRowMouseOut="this.style.backgroundColor='#{a4jSkin.tableBackgroundColor}'" cellpadding="0" cellspacing="0" rows="10">
+			
+				<f:facet name="header">
+					<rich:columnGroup>
+						<rich:column>
+							<h:outputText />
+						</rich:column>
+						<rich:column><div align="right">
+							<h:outputText value="#{lbl.disco_codigo}"/>
+						</div></rich:column>
+						<rich:column><div align="left">
+							<h:outputText value="#{lbl.disco_titulo}"/>
+						</div></rich:column>
+						<rich:column><div align="left">
+							<h:outputText value="#{lbl.disco_genero}"/>
+						</div></rich:column>
+						<rich:column><div align="left">
+							<h:outputText value="#{lbl.disco_artista}"/>
+						</div></rich:column>
+						<rich:column><div align="left">
+							<h:outputText value="#{lbl.disco_quantidade}"/>
+						</div></rich:column>
+						<rich:column><div align="left">
+							<h:outputText value="#{lbl.disco_preco}"/>
+						</div></rich:column>
+					</rich:columnGroup>
+					
+				</f:facet>
+	
+				<rich:column styleClass="cursorMao">
+			   		<img src="${facesContextPath}/imagens/botao/folder.png"  border="0" align="middle" height="15" width="15">
+				   		<a4j:support event="onclick" action="#{discoMB.editar}" />
+				   	</img>	
+				</rich:column>	
+	
+				<rich:column>
+					<h:outputText value="#{disco.codigo}"/>
+				</rich:column>
+				
+				<rich:column>
+					<h:outputText value="#{disco.titulo}"/>
+				</rich:column>
+				
+				<rich:column>
+					<h:outputText value="#{disco.genero}"/>
+				</rich:column>
+				
+				<rich:column>
+					<h:outputText value="#{disco.artista}"/>
+				</rich:column>
+				
+				<rich:column>
+					<h:outputText value="#{disco.quantidade}"/>
+				</rich:column>
+				
+				<rich:column>
+					<h:outputText value="#{disco.preco}"/>
+				</rich:column>
+				
+			</rich:dataTable>
+
+            <rich:datascroller id="dsTableDisco" for="tableDisco"/>	
+		
+		</ui:define>
+		
+	</ui:composition>
+</html>

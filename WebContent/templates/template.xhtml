@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:jsp="http://java.sun.com/JSP/Page"
+    xmlns:c="http://java.sun.com/jstl/core"	
+	xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:rich="http://richfaces.org/rich">
+
+	<c:set var="facesContextPath" scope="request" value="#{facesContext.externalContext.request.contextPath}"/>
+	<c:set var="pageContextPath"  scope="request" value="${pageContext.request.contextPath}"/>
+
+	<head>
+		<title><ui:insert name="pageTitle">#{lbl.software}</ui:insert></title>
+	
+		<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+		
+		<link href="${facesContextPath}/css/padrao.css"	rel="stylesheet" type="text/css"/>
+		<link href="${facesContextPath}/css/link.css"	rel="stylesheet" type="text/css"/>
+		<link href="${facesContextPath}/css/texto.css"	rel="stylesheet" type="text/css"/>
+	</head>
+
+<body>
+	
+	<table style="border: 1px solid #CAD6E0" cellpadding="0" cellspacing="0" border="1" width="100%">
+
+		<tr class="cabecalho">
+			<td height="42" width="100%" colspan="2">
+				<h:panelGroup><div align="right">
+					<h1>#{lbl.software}</h1>
+				</div></h:panelGroup>
+
+			</td>
+		</tr>
+				 	
+		<tr>
+			<td width="10%" valign="top">
+				<a4j:form id="Menu">
+					<ui:insert name="pageMenu"> 					 
+						<ui:include src="/pages/menu/menu.xhtml"/>							  
+					</ui:insert>
+				</a4j:form>
+				<br />
+				<h:graphicImage value="/imagens/logo.jpg"/>
+			</td>
+			<td width="90%">
+				<table width="100%" style="height: 300px" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td align="center" width="100%" valign="top">
+							<ui:insert name="body">
+								<table width="100%" style="height: 300px" align="center" cellpadding="0" cellspacing="0" border="0">
+									<tbody>
+										<tr>
+											<td align="center" width="100%" valign="top"/>
+										</tr>
+									</tbody>
+								</table>
+							</ui:insert>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+			
+		<tr>
+			<td colspan="2" valign="bottom" height="1" width="100%" class="rodape">
+				<ui:insert name="pageFooter">
+					<table width="100%">
+						<tr>
+							<td width="85%" align="center"></td>
+							<td align="right"><span class="textoRodape">#{lbl.software_versao}</span></td>
+						</tr>
+					</table>
+				</ui:insert>
+			</td>
+		</tr>
+			
+	</table>
+	
+</body>
+
+</html>
